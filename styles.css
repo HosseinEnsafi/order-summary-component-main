@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  --primary-color: hsl(225, 100%, 94%);
+  --primary-alt: hsl(245, 75%, 52%);
+  --natural-pale: hsl(225, 100%, 98%);
+  --natural-desaturated: hsl(224, 23%, 55%);
+  --natural-dark: hsl(223, 47%, 23%);
+  /* --jdf:#D6E1FF */
+
+  /*========== Font and typography ==========*/
+  --body-font: "Open Sans", sans-serif;
+  --font-normal: 500;
+  --font-semibold: 700;
+  --font-bold: 900;
+}
+
+/*=============== UTILITY CLASSES ===============*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  background-image: url("./images/pattern-background-mobile.svg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: var(--natural-pale);
+  font-size: var(--normal-font-size);
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a:any-link {
+  text-decoration: none;
+}
+
+/*=============== REUSEABLE CLASSES ===============*/
+.container {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+/*=============== CARD ===============*/
+.card {
+}
+
+.card__container {
+  overflow: hidden;
+  width: 20.625rem;
+  background: #fff;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  border-radius: 1.25rem;
+}
+
+.card__data {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.card__title {
+  margin-bottom: 1.5625rem;
+}
+
+.card__description {
+  color: var(--natural-desaturated);
+  margin-bottom: 25px;
+}
+
+.card__plan {
+  display: flex;
+  padding: 1.25rem;
+  gap: 1.25rem;
+  background-color: hsl(230, 75%, 98%);
+  border-radius: 0.75rem;
+}
+
+.card__pricing {
+}
+
+.card__time-plan {
+  color: var(--natural-dark);
+  font-weight: var(--font-semibold);
+  letter-spacing: -0.2px;
+  word-spacing: 0.2px;
+  font-size: 0.9375rem;
+}
+
+.card-price {
+  color: var(--natural-desaturated);
+  font-size: 0.9375rem;
+  letter-spacing: -0.3px;
+}
+
+.card__plan-action {
+  margin-left: auto;
+  font-weight: var(--font-semibold);
+  color: var(--primary-alt);
+  text-decoration: underline;
+  transition: color 300ms;
+}
+
+.card__plan-action:hover {
+  color: hsl(245, 90%, 52%);
+}
+
+.card__action {
+  margin-top: 1.5625rem;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1.25rem;
+}
+
+.card__btn-accept {
+  width: 100%;
+  color: white;
+  background: var(--primary-alt);
+  padding: 12px 3.75rem;
+  border-radius: 1rem;
+  transition: 300ms;
+}
+
+.card__btn-accept:hover {
+  box-shadow: 0px 20px 25px 0px #ced1dd;
+  background-color: hsl(245, 90%, 52%);
+}
+
+.card__btn-cancel {
+  width: 100%;
+  color: var(--natural-desaturated);
+  font-weight: var(--font-semibold);
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-image: url("./images/pattern-background-desktop.svg");
+  }
+}
